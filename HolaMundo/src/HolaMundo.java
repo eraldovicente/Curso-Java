@@ -16,5 +16,16 @@ public class HolaMundo {
         System.out.println("numero2 = " + numero);
 
         var numero3 = "15";
+
+        String nombre;
+
+        nombre = "Eraldo";
+
+        if(numero > 10) {
+          nombre = "Gabriel";
+        }
+
+        System.out.println("nombre = " + nombre);
+
     }
 }
