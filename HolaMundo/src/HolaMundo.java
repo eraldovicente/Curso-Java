@@ -1,5 +1,20 @@
 public class HolaMundo {
     public static void main(String[] args) {
-        System.out.println("Hola Mundo desde Java");
+
+        String saludar = "Hola Mundo desde Java";
+        System.out.println(saludar);
+        System.out.println("saludar.toUpperCase() = " + saludar.toUpperCase());
+
+        int numero = 10;
+
+        boolean valor = true;
+        int numero2;
+        if(valor) {
+            System.out.println("numero = " + numero);
+            numero2 = 10;
+        }
+        System.out.println("numero2 = " + numero);
+
+        var numero3 = "15";
     }
 }
