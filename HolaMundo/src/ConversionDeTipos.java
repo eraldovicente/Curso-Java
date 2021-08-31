@@ -29,5 +29,16 @@ public class ConversionDeTipos {
 
         otroRealStr = String.valueOf(1.23456e2f);
         System.out.println("otroRealStr = " + otroRealStr);
+
+        int i = 32767;
+        short s = (short) i;
+        System.out.println("s = " + s);
+        long l = i;
+        System.out.println("l = " + l);
+        System.out.println(Short.MAX_VALUE);
+        char b = (char) i;
+        System.out.println("b = " + b);
+        float f = (float) i;
+        System.out.println("f = " + f);
     }
 }
