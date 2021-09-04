@@ -14,7 +14,7 @@ public class PasarPorReferencia {
             System.out.println("edad[i] = " + edad[i]);
         }
 
-        System.out.println("Finaliza el método main con los datos del arreglo modificados! " + i);
+        System.out.println("Finaliza el método main con los datos del arreglo modificados!");
     }
 
     public static void test(int[] edadArr){
