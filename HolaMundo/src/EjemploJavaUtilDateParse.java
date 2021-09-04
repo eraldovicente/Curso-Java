@@ -13,7 +13,7 @@ public class EjemploJavaUtilDateParse {
         try {
             Date fecha = format.parse(s.next());
             System.out.println("fecha = " + fecha);
-            System.out.println("format = " + format.format(fecha));
+            System.out.println("format = " +  format.format(fecha));
         } catch (ParseException e) {
             e.printStackTrace();
         }
