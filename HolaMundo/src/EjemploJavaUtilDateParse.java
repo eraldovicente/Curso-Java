@@ -34,7 +34,9 @@ public class EjemploJavaUtilDateParse {
                 System.out.println("Fecha es igual a fecha2");
             }
         } catch (ParseException e) {
-            e.printStackTrace();
+            System.err.println("Formato incorrecto " + e.getMessage());
+            //System.exit(1);
+            main(args);
         }
     }
 }
