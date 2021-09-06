@@ -33,7 +33,7 @@ public class EjemploArregloFor {
         System.out.println("=== Usando do while ===");
         int j = 0;
         do {
-            System.out.println("para indice " + j + " : " + productos[i]);
+            System.out.println("para indice " + j + " : " + productos[j]);
             j++;
         } while (j < total);
 
