@@ -31,5 +31,27 @@ public class EjemploArregloForOndenamientoBurbuja {
         for (int i = 0; i < total; i++) {
             System.out.println("para indice " + i + " : " + productos[i]);
         }
+
+        int[] numeros = new int[4];
+
+        numeros[0] = 1;
+        numeros[1] = Integer.valueOf("2");
+        numeros[2] = (int) 3L;
+        numeros[3] = 4;
+
+        int totalNum = numeros.length;
+        for(int i = 0; i < totalNum - 1; i++) {
+            for(int j = 0; j < totalNum - 1 - i; j++) {
+                if( ((Comparable) numeros[j+1]).compareTo(numeros[j]) < 0) {
+                    int auxiliar = numeros[j];
+                    numeros[j] = numeros[j+1];
+                    numeros[j+1] = auxiliar;
+                }
+            }
+        }
+
+        for(int i = 0; i < totalNum; i++) {
+            System.out.println("i = " + i + " : " + i);
+        }
     }
 }
