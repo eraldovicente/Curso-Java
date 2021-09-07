@@ -2,9 +2,9 @@ public class EjemploArreglosCombinados {
     public static void main(String[] args) {
 
         int[] a, b, c;
-        a = new int[10];
-        b = new int[10];
-        c = new int[20];
+        a = new int[9];
+        b = new int[9];
+        c = new int[18];
 
         for(int i = 0; i < a.length; i++) {
             a[i] = i + 1;
@@ -15,9 +15,13 @@ public class EjemploArreglosCombinados {
         }
 
         int aux = 0;
-        for(int i = 0; i < 10; i++) {
-            c[aux++] = a[i];
-            c[aux++] = b[i];
+        for(int i = 0; i < 10; i+=3) {
+            for(int j = 0; j < 3; j++) {
+                c[aux++] = a[i+j];
+            }
+            for(int j = 0; j < 3; j++) {
+                c[aux++] = b[i+j];
+            }
         }
 
         for(int i = 0; i < c.length; i++) {
