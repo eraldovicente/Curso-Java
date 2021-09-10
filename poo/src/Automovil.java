@@ -4,6 +4,7 @@ public class Automovil {
     String modelo;
     String color = "gris";
     double cilindrada;
+    int capacidadEstanque = 40;
 
     public String verDetalle() {
         return "auto.fabricante = " + this.fabricante +
@@ -24,6 +25,14 @@ public class Automovil {
         String acelerar = this.acelerar(rpm);
         String frenar = this.frenar();
         return acelerar + "\n" + frenar;
+    }
+
+    public float calcularConsumo(int km, float porcentajeBencina) {
+        return km/(capacidadEstanque*porcentajeBencina);
+    }
+
+    public float calcularConsumo(int km, int porcentajeBencina) {
+        return km/(capacidadEstanque*(porcentajeBencina/100f));
     }
 
 }
