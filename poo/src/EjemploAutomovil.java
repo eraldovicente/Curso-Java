@@ -25,6 +25,8 @@ public class EjemploAutomovil {
 
         System.out.println(auto.equals(fecha));
         System.out.println(auto.equals(nissan));
+        System.out.println(nissan);
+        System.out.println(nissan.toString());
 
         System.out.println(subaru.acelerarFrenar(4000));
 
