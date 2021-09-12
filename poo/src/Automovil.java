@@ -6,6 +6,9 @@ public class Automovil {
     private double cilindrada;
     private int capacidadEstanque = 40;
 
+    private static String colorPatente = "Naranja";
+    private static int capacidadEstanqueEstatico = 30;
+
     public Automovil() {
     }
 
@@ -69,10 +72,19 @@ public class Automovil {
         this.capacidadEstanque = capacidadEstanque;
     }
 
+    public static String getColorPatente() {
+        return colorPatente;
+    }
+
+    public static void setColorPatente(String colorPatente) {
+        Automovil.colorPatente = colorPatente;
+    }
+
     public String verDetalle() {
         return "auto.fabricante = " + this.fabricante +
                 "\nauto.modelo = " + this.modelo +
                 "\nauto.color = " + this.color +
+                "\nauto.patenteColor = " + colorPatente +
                 "\nauto.cilindrada = " + this.cilindrada;
     }
 
@@ -96,6 +108,10 @@ public class Automovil {
 
     public float calcularConsumo(int km, int porcentajeBencina) {
         return km / (capacidadEstanque * (porcentajeBencina / 100f));
+    }
+
+    public static float calcularConsumoEstatico(int km, int porcentajeBencina) {
+        return km / (Automovil.capacidadEstanqueEstatico * (porcentajeBencina / 100f));
     }
 
     @Override
