@@ -6,6 +6,14 @@ public class Automovil {
     private double cilindrada;
     private int capacidadEstanque = 40;
 
+    public Automovil() {
+    }
+
+    public Automovil(String fabricante, String modelo) {
+        this.fabricante = fabricante;
+        this.modelo = modelo;
+    }
+
     public String getFabricante() {
         return fabricante;
     }

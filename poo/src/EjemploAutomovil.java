@@ -1,18 +1,16 @@
 public class EjemploAutomovil {
     public static void main(String[] args) {
 
-        Automovil subaru = new Automovil();
-        subaru.setFabricante("Subaru");
-        subaru.setModelo("Impreza");
+        Automovil subaru = new Automovil("Subaru", "Impreza");
         subaru.setCilindrada(2.0);
         subaru.setColor("Blanco");
 
-        Automovil mazda = new Automovil();
-        mazda.setFabricante("Mazda");
-        mazda.setModelo("BT-50");
+        Automovil mazda = new Automovil("Mazda", "BT-50");
         mazda.setCilindrada(3.0);
         mazda.setColor("Rojo");
         System.out.println("mazda.leerFabricante() = " + mazda.getFabricante());
+
+        Automovil nissan = new Automovil();
 
         System.out.println(subaru.verDetalle() + "\n");
         System.out.println(mazda.verDetalle());
