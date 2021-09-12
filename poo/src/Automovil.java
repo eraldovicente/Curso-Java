@@ -6,43 +6,43 @@ public class Automovil {
     private double cilindrada;
     private int capacidadEstanque = 40;
 
-    public String leerFabricante() {
-        return this.fabricante;
+    public String getFabricante() {
+        return fabricante;
     }
 
-    public void asignarFabricante(String fabricante) {
+    public void setFabricante(String fabricante) {
         this.fabricante = fabricante;
     }
 
-    public String leerModel() {
+    public String getModelo() {
         return modelo;
     }
 
-    public void asignarModelo(String modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
-    public String leerColor() {
+    public String getColor() {
         return color;
     }
 
-    public void asignarColor(String color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public double leerCilindrada() {
+    public double getCilindrada() {
         return cilindrada;
     }
 
-    public void asignarCilindrada(double cilindrada) {
+    public void setCilindrada(double cilindrada) {
         this.cilindrada = cilindrada;
     }
 
-    public int leerCapacidadEstanque() {
+    public int getCapacidadEstanque() {
         return capacidadEstanque;
     }
 
-    public void asignarCapacidadEstanque(int capacidadEstanque) {
+    public void setCapacidadEstanque(int capacidadEstanque) {
         this.capacidadEstanque = capacidadEstanque;
     }
 
@@ -68,11 +68,11 @@ public class Automovil {
     }
 
     public float calcularConsumo(int km, float porcentajeBencina) {
-        return km/(capacidadEstanque*porcentajeBencina);
+        return km / (capacidadEstanque * porcentajeBencina);
     }
 
     public float calcularConsumo(int km, int porcentajeBencina) {
-        return km/(capacidadEstanque*(porcentajeBencina/100f));
+        return km / (capacidadEstanque * (porcentajeBencina / 100f));
     }
 
 }
