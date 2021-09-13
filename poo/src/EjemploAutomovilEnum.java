@@ -26,5 +26,14 @@ public class EjemploAutomovilEnum {
             case SEDAN -> System.out.println("Es un automovil mediano");
             case STATION_WAGON -> System.out.println("Es un automovil más grande, con maleta grande...");
         }
+
+        TipoAutomovil[] tipos = TipoAutomovil.values();
+        for(TipoAutomovil ta : tipos) {
+            System.out.println(ta + " => " + ta.name() + ", " +
+                    ta.getNombre() + ", " +
+                    ta.getDescripcion() + ", " +
+                    ta.getNumeroPuerta());
+            System.out.println();
+        }
     }
 }
