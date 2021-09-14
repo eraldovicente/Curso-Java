@@ -8,6 +8,7 @@ public class Automovil {
     private Estanque estanque;
     private Persona conductor;
     private Rueda[] ruedas;
+    private int indiceRuedas;
 
     private TipoAutomovil tipo;
 
@@ -26,6 +27,7 @@ public class Automovil {
 
     public Automovil() {
         this.id = ++ultimoId;
+        this.ruedas = new Rueda[5];
     }
 
     public Automovil(String fabricante, String modelo) {
@@ -152,6 +154,14 @@ public class Automovil {
 
     public static void setUltimoId(int ultimoId) {
         Automovil.ultimoId = ultimoId;
+    }
+
+    public Automovil addRueda(Rueda rueda) {
+        if (indiceRuedas < this.ruedas.length) {
+            this.ruedas[indiceRuedas++] = rueda;
+        }
+
+        return this;
     }
 
     public String verDetalle() {
