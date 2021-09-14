@@ -168,6 +168,17 @@ public class Automovil {
         if (this.motor != null) {
             detalle += "\nauto.cilindrada = " + this.motor.getCilindrada();
         }
+
+        if (conductor != null) {
+            detalle += "\nConductor subaru: " + this.getConductor();
+        }
+
+        if (getRuedas() != null) {
+            detalle += "\nRuedas del automóvil: ";
+            for (Rueda r : this.getRuedas()) {
+                detalle += "\n" + r.getFabricante() + ", arco: " + r.getAro() + ", ancho " + r.getAncho();
+            }
+        }
         return detalle;
     }
 
