@@ -3,6 +3,10 @@ package org.aguzman.pooherencia;
 public class Profesor extends Persona {
     private String asignatura;
 
+    public Profesor() {
+        System.out.println("Profesor: inicializando constructor...");
+    }
+
     public String getAsignatura() {
         return asignatura;
     }
