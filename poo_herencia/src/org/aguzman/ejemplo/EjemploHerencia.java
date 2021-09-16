@@ -1,4 +1,6 @@
-package org.aguzman.pooherencia;
+package org.aguzman.ejemplo;
+
+import org.aguzman.pooherencia.*;
 
 public class EjemploHerencia {
     public static void main(String[] args) {
