@@ -23,7 +23,7 @@ public class InputForm extends ElementoForm{
 
     @Override
     public String dibujarHtml() {
-        return "<input type=\" " + this.tipo
+        return "<input type=\"" + this.tipo
                 + "\" name=\"" + this.nombre
                 + "\" value=\"" + this.valor + "\">";
     }
