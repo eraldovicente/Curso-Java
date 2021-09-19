@@ -65,7 +65,7 @@ public class EjemploForm {
 
         elementos.forEach(e -> {
             if (!e.esValido()) {
-                e.getErrores().forEach(err -> System.out.println(e.getNombre() + ": " + err));
+                e.getErrores().forEach(System.out::println);
             }
         });
     }
