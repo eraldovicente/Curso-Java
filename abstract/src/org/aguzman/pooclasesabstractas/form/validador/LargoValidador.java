@@ -1,6 +1,8 @@
 package org.aguzman.pooclasesabstractas.form.validador;
 
-public class LargoValidador extends Validador {
+import org.aguzman.pooclasesabstractas.form.validador.mensaje.MensajeFormateable;
+
+public class LargoValidador extends Validador implements MensajeFormateable {
 
     protected String mensaje = "el campo %s debe tener mínimo %d caracteres y máximo %d caracteres";
     private int min;
@@ -42,6 +44,7 @@ public class LargoValidador extends Validador {
         return (largo >= min && largo <= max);
     }
 
+    @Override
     public String getMensajeFormateado(String campo) {
         return String.format(this.mensaje, this.min, this.max);
     }
