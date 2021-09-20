@@ -2,9 +2,8 @@ package org.aguzman.poointerfaces.imprenta;
 
 import org.aguzman.poointerfaces.imprenta.modelo.*;
 
-import javax.naming.ldap.PagedResultsControl;
-
 import static org.aguzman.poointerfaces.imprenta.modelo.Genero.*;
+import static org.aguzman.poointerfaces.imprenta.modelo.Imprimible.*;
 
 public class EjemploImprenta {
     public static void main(String[] args) {
@@ -31,9 +30,18 @@ public class EjemploImprenta {
         imprimir(cv);
         imprimir(informe);
         imprimir(libro);
-    }
 
+        imprimir(new Imprimible() {
+            @Override
+            public String imprimir() {
+                return "Hola que tal, imprimiendo un objeto genérico de una clase anónima!";
+            }
+        });
+
+        System.out.println(TEXTO_DEFECTO);
+    }
+/*
     public static void imprimir(Imprimible imprimible) {
         System.out.println(imprimible.imprimir());
-    }
+    }*/
 }
