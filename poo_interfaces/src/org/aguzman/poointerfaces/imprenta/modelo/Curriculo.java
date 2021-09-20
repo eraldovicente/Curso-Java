@@ -3,7 +3,7 @@ package org.aguzman.poointerfaces.imprenta.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Curriculo extends Hoja {
+public class Curriculo extends Hoja implements Imprimible {
 
     private String persona;
     private String carrera;

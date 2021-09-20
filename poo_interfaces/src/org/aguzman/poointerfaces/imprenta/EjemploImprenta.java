@@ -1,8 +1,7 @@
 package org.aguzman.poointerfaces.imprenta;
 
-import org.aguzman.poointerfaces.imprenta.modelo.Curriculo;
-import org.aguzman.poointerfaces.imprenta.modelo.Hoja;
-import org.aguzman.poointerfaces.imprenta.modelo.Informe;
+import org.aguzman.poointerfaces.imprenta.modelo.*;
+import static org.aguzman.poointerfaces.imprenta.modelo.Genero.*;
 
 public class EjemploImprenta {
     public static void main(String[] args) {
@@ -14,12 +13,23 @@ public class EjemploImprenta {
         cv.addExperiencia("Desarrollador fullstack");
         cv.addExperiencia("Angular");
 
-        Informe informe = new Informe("Martin Fowler", "James", "Estudio sobre microservicios");
+        Libro libro = new Libro("Erich Gamma",
+                "Patrones de diseños: Elem. Reusables POO", PROGRAMACION);
+        libro.addPagina(new Pagina("Patrón Singleton"))
+                .addPagina(new Pagina("Patrón Observador"))
+                .addPagina(new Pagina("Patrón Factory"))
+                .addPagina(new Pagina("Patrón Composite"))
+                .addPagina(new Pagina("Patrón Facade"));
+
+
+        Informe informe = new Informe("Martin Fowler",
+                "James", "Estudio sobre microservicios");
         imprimir(cv);
         imprimir(informe);
+        imprimir(libro);
     }
 
-    public static void imprimir(Hoja imprimible) {
+    public static void imprimir(Imprimible imprimible) {
         System.out.println(imprimible.imprimir());
     }
 }
