@@ -25,7 +25,7 @@ public class ClienteListRepositorio implements CrudRepositorio,
     public Cliente porId(Integer id) {
         Cliente resultado = null;
         for (Cliente cli: dataSource) {
-            if (cli.getId().equals(id)) {
+            if (cli.getId() != null && cli.getId().equals(id)) {
                 resultado = cli;
                 break;
             }
@@ -73,7 +73,7 @@ public class ClienteListRepositorio implements CrudRepositorio,
                                 resultado = b.getApellido().compareTo(a.getApellido());
                     }
                 }
-                return 0;
+                return resultado;
             });
         return dataSource;
     }
