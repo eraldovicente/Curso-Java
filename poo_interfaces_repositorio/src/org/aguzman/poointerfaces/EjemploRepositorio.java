@@ -2,6 +2,7 @@ package org.aguzman.poointerfaces;
 
 import org.aguzman.poointerfaces.modelo.Cliente;
 import org.aguzman.poointerfaces.repositorio.*;
+import org.aguzman.poointerfaces.repositorio.lista.ClienteListRepositorio;
 
 import java.util.List;
 

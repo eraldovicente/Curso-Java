@@ -1,6 +1,8 @@
-package org.aguzman.poointerfaces.repositorio;
+package org.aguzman.poointerfaces.repositorio.lista;
 
 import org.aguzman.poointerfaces.modelo.Cliente;
+import org.aguzman.poointerfaces.repositorio.AbstractaListRepositorio;
+import org.aguzman.poointerfaces.repositorio.Direccion;
 
 import java.util.ArrayList;
 import java.util.List;
