@@ -1,7 +1,5 @@
 package org.aguzman.poointerfaces.modelo;
 
-import org.aguzman.poointerfaces.repositorio.ClienteListRepositorio;
-
 import java.util.Objects;
 
 public class Cliente {
