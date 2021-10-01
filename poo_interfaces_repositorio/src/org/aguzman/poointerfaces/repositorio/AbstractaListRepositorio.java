@@ -2,8 +2,7 @@ package org.aguzman.poointerfaces.repositorio;
 
 
 import org.aguzman.poointerfaces.modelo.BaseEntity;
-import org.aguzman.poointerfaces.repositorio.excepciones.EscrituraAccesoDatoException;
-import org.aguzman.poointerfaces.repositorio.excepciones.LecturaAccesoDatoException;
+import org.aguzman.poointerfaces.repositorio.excepciones.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +42,10 @@ public abstract class AbstractaListRepositorio<T extends BaseEntity> implements 
     public void crear(T t) throws EscrituraAccesoDatoException {
         if (t == null) {
             throw new EscrituraAccesoDatoException("Error al insertar un objeto null");
+        }
+        if (this.dataSource.contains(t)) {
+            throw new RegistroDuplicadoAccesoDatoException("Error en el objeto con id "
+                    + t.getId() + " existe en el repositorio");
         }
         this.dataSource.add(t);
     }

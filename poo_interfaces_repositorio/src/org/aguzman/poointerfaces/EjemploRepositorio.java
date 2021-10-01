@@ -5,6 +5,7 @@ import org.aguzman.poointerfaces.repositorio.*;
 import org.aguzman.poointerfaces.repositorio.excepciones.AccesoDatoException;
 import org.aguzman.poointerfaces.repositorio.excepciones.EscrituraAccesoDatoException;
 import org.aguzman.poointerfaces.repositorio.excepciones.LecturaAccesoDatoException;
+import org.aguzman.poointerfaces.repositorio.excepciones.RegistroDuplicadoAccesoDatoException;
 import org.aguzman.poointerfaces.repositorio.lista.ClienteListRepositorio;
 
 import java.util.List;
@@ -17,9 +18,11 @@ public class EjemploRepositorio {
             repo.crear(new Cliente("Eraldo", "Vicente"));
             repo.crear(new Cliente("Fabiana", "Paes"));
             repo.crear(new Cliente("Gabriel", "Santana"));
-            repo.crear(new Cliente("Edna", "Olímpio"));
+            Cliente edna = new Cliente("Edna", "Olímpio");
+            repo.crear(edna);
+            repo.crear(edna);
 
-            repo.crear(null);
+//            repo.crear(null);
 
             List<Cliente> clientes = repo.listar();
             clientes.forEach(System.out::println);
@@ -49,6 +52,9 @@ public class EjemploRepositorio {
             System.out.println("====== total ======");
             System.out.println("Total registros: " + repo.total());
 
+        } catch (RegistroDuplicadoAccesoDatoException e) {
+            System.out.println("Registro duplicado: " + e.getMessage());
+            e.printStackTrace();
         } catch (LecturaAccesoDatoException e) {
             System.out.println("Lectura: " + e.getMessage());
             e.printStackTrace();
