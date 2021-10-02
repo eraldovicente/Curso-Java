@@ -63,14 +63,48 @@ public class EjemploHashMap {
             System.out.println("k = " + k);
         }
 
+        /*System.out.println("=========== entrySet =============");
+        for (Map.Entry<String, Object> par: persona.entrySet()) {
+            Object valor = par.getValue();
+            if (valor instanceof Map) {
+                String nom = (String) persona.get("nombre");
+                Map<String, String> direccionMap = (Map<String, String>) valor;
+                System.out.println("El pais de " + nom + ": "
+                        + direccionMap.get("pais"));
+                System.out.println("El estado de " + nom + ": " + direccionMap.get("estado"));
+                System.out.println("La ciudad de " + nom + ": " + direccionMap.get("ciudad"));
+            } else {
+                System.out.println(par.getKey() + " => " + valor);
+            }
+        }*/
+
         System.out.println("=========== entrySet =============");
         for (Map.Entry<String, Object> par: persona.entrySet()) {
-            System.out.println(par.getKey() + " => " + par.getValue());
+            Object valor = par.getValue();
+            if (valor instanceof Map) {
+                String nom = (String) persona.get("nombre");
+                Map<String, String> direccionMap = (Map<String, String>) valor;
+                for (Map.Entry<String, String> parDir: direccionMap.entrySet()) {
+                    System.out.println(parDir.getKey() + " => " + parDir.getValue());
+                }
+            } else {
+                System.out.println(par.getKey() + " => " + valor);
+            }
         }
 
         System.out.println("=========== keySet =============");
         for (String llave: persona.keySet()) {
             Object valor = persona.get(llave);
+            if (valor instanceof Map) {
+                String nom = (String) persona.get("nombre");
+                Map<String, String> direccionMap = (Map<String, String>) valor;
+                System.out.println("El pais de " + nom + ": "
+                        + direccionMap.get("pais"));
+                System.out.println("El estado de " + nom + ": " + direccionMap.get("estado"));
+                System.out.println("La ciudad de " + nom + ": " + direccionMap.get("ciudad"));
+            } else {
+                System.out.println(llave + " => " + valor);
+            }
             System.out.println(llave + " => " + valor);
         }
 
