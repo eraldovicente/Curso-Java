@@ -1,4 +1,4 @@
-package org.aguzman.ejemplos.set;
+package org.aguzman.ejemplos.List;
 
 import org.aguzman.ejemplos.modelo.Alumno;
 
