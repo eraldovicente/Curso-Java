@@ -1,6 +1,6 @@
 package org.aguzman.hilos.ejemplosync;
 
-public class Panadaria {
+public class Panaderia {
     private String pan;
     private boolean disponible;
 
