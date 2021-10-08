@@ -3,10 +3,21 @@ package org.aguzman.api.stream.ejemplos.model;
 public class Usuario {
     private String nombre;
     private String apellido;
+    private Integer id;
+    private static int ultimoId;
 
     public Usuario(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.id = ++ultimoId;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNombre() {
