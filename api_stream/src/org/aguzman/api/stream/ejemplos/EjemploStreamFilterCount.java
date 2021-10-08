@@ -2,20 +2,21 @@ package org.aguzman.api.stream.ejemplos;
 
 import org.aguzman.api.stream.ejemplos.model.Usuario;
 
-import java.util.Optional;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
-public class EjemploStreamFilterSingle2 {
+public class EjemploStreamFilterCount {
     public static void main(String[] args) {
 
-        Usuario usuario = Stream
+        long count = Stream
                 .of("Pato Guzman", "Paco Gonzalez", "Pepa Gutierrez", "Pepe Mena",
                         "Pepe Garcia")
                 .map(nombre -> new Usuario(nombre.split(" ")[0], nombre.split(" ")[1]))
                 .peek(System.out::println)
-                .filter(u -> u.getId().equals(5))
-                .findFirst().get();
+                .count();
 
-        System.out.println(usuario);
+        System.out.println(count);
+
     }
 }
